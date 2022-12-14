@@ -62,7 +62,6 @@ btnCerrar.addEventListener("click", limpiarFormulario);
 
 
 cargaInicial()
-cargaInicialModificada()
 // logica del crud
 
 
@@ -157,7 +156,7 @@ function crearFila(producto) {
   // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
 
   tablaProducto.innerHTML +=
-    `<tr>
+    `<tr id="trModificado" >
   <th >${producto.codigo}</th>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
@@ -171,7 +170,7 @@ function crearFila(producto) {
   <button class="btn btn-dark d-flex align-items-center my-1" onclick="borrarProducto('${producto.codigo}')">
     Borrar
   </button>
-  <button class="btn btn-dark d-flex align-items-center my-1 " onclick="destacarProducto('${producto.codigo}')">
+  <button class="btn btn-dark d-flex align-items-center my-1 " onclick="destacarJuego('${producto.codigo}')">
   ☆
 </button>
 </td>
@@ -181,46 +180,21 @@ function crearFila(producto) {
 }
 
 
-function crearFilaModificada(producto) {
-  let tablaProducto = document.querySelector("#tablaProducto");
-  // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
 
-  tablaProducto.innerHTML +=
-    `<tr class="table-dark" >
-  <th >${producto.codigo}</th>
-  <td>${producto.producto}</td>
-  <td>${producto.descripcion}</td>
-  <td>${producto.categoria}</td>
-  <td>${producto.publicado}</td>
-  <td>${producto.url}</td>
-  <td>
-  <button class="btn btn-light d-flex align-items-centerv my-1" data-bs-toggle="modal" data-bs-target="#cargarJuego" onclick="prepararEdicionProducto('${producto.codigo}')">
-    Editar
-  </button>
-  <button class="btn btn-dark d-flex align-items-center my-1" onclick="borrarProducto('${producto.codigo}')">
-    Borrar
-  </button>
-  <button class="btn btn-dark d-flex align-items-center my-1 " onclick="destacarProducto('${producto.codigo}')">
-  ☆
-</button>
-</td>
+// // destacar fila de tabla 
+// window.destacarJuego = function(codigo) {
 
-  </tr>
-`
-}
-// crear filaDescatada
 
-// destacar fila de tabla 
-window.destacarProducto = function(codigo) {
 
-  // actualizar en el local storage
-
-  guardarLocalStorage();
-  // actualizar la tabla -primero borrar 
-  borrarTabla();
-  // luego actualizarla desde el local storage ya actualizado
-  cargaInicialModificada();
-}
+//   console.log("desde destacarJuego");
+//   let trModificado = document.querySelector("#trModificado")
+  
+  
+//   trModificado.className = "table-dark"
+  
+//   guardarLocalStorage()
+  
+//   }
 
 // cargar la tabla conm los datos existentes del LocalStorage
 
@@ -235,17 +209,6 @@ function cargaInicial() {
 
 }
 
-// carga inicial destacada 
-function cargaInicialModificada() {
-  if (listaProducto.length > 0)
-    //crear fila 
-
-    listaProducto.forEach((itemProducto) => {
-      crearFilaModificada(itemProducto)
-
-    }) ;
-
-}
 
 
 window.prepararEdicionProducto = function (codigo) {
