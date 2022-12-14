@@ -18,13 +18,13 @@ let formularioProducto = document.querySelector("#formProducto");
 
 let btnPublicado = document.querySelector("#btnPublicado");
  
-let productoExistente = false  ; //variable bandera: si es false quiere crear producto, si es true modificar producto
-
-// si hay productos en el local storage ,quiero guardar en el array de productos
-// y si no que sea un array vacio
+let productoExistente = false  ;
 
 let listaProducto = JSON.parse(localStorage.getItem("arrayProductoKey")) || [];
-// asociar un evento a cada elemento obtenido
+
+// btn cerrar para limpar formulario 
+
+let btnCerrar = document.querySelector("#btnCerrar")
 
 
 // btn publicado true o false
@@ -55,9 +55,10 @@ campoUrl.addEventListener("blur", () => {
 
 formularioProducto.addEventListener("submit", guardarProducto);
 
+btnCerrar.addEventListener("click" , limpiarFormulario );
 
 
-// invoco a carga inicial de lista , si tengo productos en el local storage los muestra en la tabla
+// invoco a carga inicial de lista , si tengo juegos en el local storage los muestra en la tabla
 
 
 cargaInicial()
@@ -79,7 +80,7 @@ function guardarProducto(e) {
       campoUrl
     )
   ) {
-    // console.log("los datos fueron enviados correctamente");
+  
     if (productoExistente === false) {
       //crear producto
       crearProducto();

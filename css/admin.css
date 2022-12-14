@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;800;900&display=swap);
+
+
+
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -17,15 +22,17 @@
 }
 
 body {
-    background-color: #003566;
+    background-image: url(../img/administrador.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #001D3D;
 }
 
 .navbar {
-    background-color: #FAF102 !important;
+    background-color: #FFD60A !important;
 }
 
-.nuevoJuego{
+.nuevoJuego {
     margin-top: 10rem;
 }
 
@@ -43,7 +50,7 @@ body {
 .button {
     display: inline-block;
     text-align: center;
-    background: #F7CB15;
+    background: var(--font-color2);
     color: var(--bg);
     font-weight: bold;
     padding: 1.18em 1.32em 1.03em;
@@ -64,9 +71,9 @@ body {
     position: absolute;
     content: "";
     display: inline-block;
-    background: #F7CB15;
+    background: var(--font-color2);
     border-radius: 50%;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease;
     transform: scale(0);
     z-index: -1;
 }
@@ -84,4 +91,32 @@ body {
 .button:hover:before,
 .button:hover:after {
     transform: none;
+}
+
+svg {
+    visibility: hidden;
+    position: absolute;
+    width=0;
+    height=0;
+
+}
+
+
+table {
+    font-size: ;
+    font-family: 'Kanit', sans-serif;
+    background: var(--font-color2) ;
+    border: 5px solid black;
+}
+
+/* btn publicado */ 
+.btnAdm {
+    padding: 10px 15px;
+    background-color: #003566;
+
+}
+
+.btnAdm:hover {
+    background-color: #FAF102;
+    color: #000814;
 }
