@@ -157,7 +157,7 @@ function crearFila(producto) {
   // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
 
   tablaProducto.innerHTML +=
-    `<tr>
+    `<tr >
   <th >${producto.codigo}</th>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
@@ -186,7 +186,7 @@ function crearFilaModificada(producto) {
   // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
 
   tablaProducto.innerHTML +=
-    `<tr class="table-dark" >
+    `<tr class="text-danger" >
   <th >${producto.codigo}</th>
   <td>${producto.producto}</td>
   <td>${producto.descripcion}</td>
@@ -209,6 +209,7 @@ function crearFilaModificada(producto) {
 `
 }
 // crear filaDescatada
+
 
 // destacar fila de tabla 
 window.destacarProducto = function(codigo) {
