@@ -24,6 +24,10 @@ body {
 .navbar {
     background-color: #FAF102 !important;
 }
+.navbar img{
+    width: 100%;
+    height: 50px;
+}
 
 
 
