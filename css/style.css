@@ -199,4 +199,18 @@ video-container video {
     color: #b8b8b8;
 }
 
-/*   pagina adminsitrador  */ 
+/*   link busqueda  */
+
+.linksBusqueda {
+    box-shadow: inset 0 0 0 0 #003566;
+    color: #003566;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out
+}
+
+.linksBusqueda:hover {
+    box-shadow: inset 250px 0 0 0 #003566;
+    color: white;
+  }
+

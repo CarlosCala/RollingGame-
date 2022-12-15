@@ -14,58 +14,35 @@ let campoCategoria = document.getElementById("categoria")
 let campoUrl = document.getElementById("url");
 // para el evento submit del formulario
 let formularioProducto = document.querySelector("#formProducto");
-
-
 let btnPublicado = document.querySelector("#btnPublicado");
-
 let productoExistente = false;
-
 let listaProducto = JSON.parse(localStorage.getItem("arrayProductoKey")) || [];
-
 // btn cerrar para limpar formulario 
-
 let btnCerrar = document.querySelector("#btnCerrar")
-
-
 // btn publicado true o false
-
 let juegoPublicado = "no publicado";
-
 
 campoProducto.addEventListener("blur", () => {
   campoRequerido(campoProducto);
 });
-
 campoDescripcion.addEventListener("blur", () => {
   campoRequerido(campoDescripcion);
 });
-
 campoCategoria.addEventListener("blur", () => {
   campoRequerido(campoDescripcion);
 });
-
 btnPublicado.addEventListener("click", () => {
   productoPublicado(juegoPublicado)
 })
-
-
 campoUrl.addEventListener("blur", () => {
   validarUrl(campoUrl);
 });
-
 formularioProducto.addEventListener("submit", guardarProducto);
-
 btnCerrar.addEventListener("click", limpiarFormulario);
-
-
 // invoco a carga inicial de lista , si tengo juegos en el local storage los muestra en la tabla
-
 
 cargaInicial()
 // logica del crud
-
-
-
 
 function guardarProducto(e) {
   //prevenir el actualizar del submit
@@ -80,7 +57,6 @@ function guardarProducto(e) {
       campoUrl
     )
   ) {
-
     if (productoExistente === false) {
       //crear producto
       crearProducto();
@@ -122,39 +98,25 @@ function crearProducto() {
 
   juegoPublicado = "no publicado";
 }
-
-
-
 // funcion limpar el formulario 
-
 function limpiarFormulario() {
   formularioProducto.reset();
-
   //resetear las clases de los imputs
-
   campoCodigo.className = "form-control";
   campoProducto.className = "form-control";
   campoDescripcion.className = "form-control";
   campoCategoria.className = "form-control";
   campoUrl.className = "form-control";
-
   //resetear la variable bandera o booleana para el caso de modificarProducto
   productoExistente = false;
 };
-
-
 function guardarLocalStorage() {
-
   localStorage.setItem("arrayProductoKey", JSON.stringify(listaProducto))
-
 }
-
-
 
 function crearFila(producto) {
   let tablaProducto = document.querySelector("#tablaProducto");
   // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
-
   tablaProducto.innerHTML +=
     `<tr id="trModificado" >
   <th >${producto.codigo}</th>
@@ -174,54 +136,25 @@ function crearFila(producto) {
   ☆
 </button>
 </td>
-
   </tr>
 `
 }
 
 
-
-// // destacar fila de tabla 
-// window.destacarJuego = function(codigo) {
-
-
-
-//   console.log("desde destacarJuego");
-//   let trModificado = document.querySelector("#trModificado")
-  
-  
-//   trModificado.className = "table-dark"
-  
-//   guardarLocalStorage()
-  
-//   }
-
-// cargar la tabla conm los datos existentes del LocalStorage
-
 function cargaInicial() {
   if (listaProducto.length > 0)
     //crear fila 
-
     listaProducto.forEach((itemProducto) => {
       crearFila(itemProducto)
-
     }) ;
-
 }
-
-
-
 window.prepararEdicionProducto = function (codigo) {
   // buscar el producto en el array 
 
   let productoBuscado = listaProducto.find((itemProducto) => {
-
     return itemProducto.codigo == codigo;
-
   })
-
   //mostrar el producto encontrado en el formulario
-
   campoCodigo.value = productoBuscado.codigo;
   campoProducto.value = productoBuscado.producto;
   campoDescripcion.value = productoBuscado.descripcion;
@@ -229,43 +162,26 @@ window.prepararEdicionProducto = function (codigo) {
   juegoPublicado = juegoPublicado;
   campoUrl.value = productoBuscado.url;
   // cambiar la bandera de producto ecistente
-
-
   productoExistente = true;
-
 }
 
 // funcion para alternar el estado del juego Publicado/No publicado
 function productoPublicado() {
-
   juegoPublicado = "publicado";
-
-  console.log("desde juego publicado");
-
 }
-
-
 function modificarProducto() {
-
   //  encontrar la posicion del elemento que quiero modificar dentro del array de productos
-
-
   let indiceProducto = listaProducto.findIndex((itemProducto) => {
-
     // con el parseInt convierto a numero el stgring a comparar ya que el codigo generado por "CODIGO UNICO" era num 
     return itemProducto.codigo === parseInt(campoCodigo.value);
   });
-
   // modificar los valores dentro de los elementos del array
-
   listaProducto[indiceProducto].producto = campoProducto.value;
   listaProducto[indiceProducto].descripcion = campoDescripcion.value;
   listaProducto[indiceProducto].categoria = campoCategoria.value;
   listaProducto[indiceProducto].publicado = juegoPublicado;
   listaProducto[indiceProducto].url = campoUrl.value;
-
   // actualizar en el local storage
-
   guardarLocalStorage();
   // actualizar la tabla -primero borrar 
   borrarTabla();
@@ -277,25 +193,14 @@ function modificarProducto() {
     'Su producto fue modificado con exito ',
     'success'
   );
-
-
-
   limpiarFormulario();
-
-
 }
-
 function borrarTabla() {
-
   let tablaProducto = document.querySelector("#tablaProducto");
-
   tablaProducto.innerHTML = ' '
-
 }
-
 // preparar para borrar producto
 window.borrarProducto = function (codigo) {
-
   Swal.fire({
     title: 'estas seguro que deseas eliminarlo',
     text: "esta accion no podra ser revertida",
@@ -326,6 +231,5 @@ window.borrarProducto = function (codigo) {
       )
     }
   });
-
 }
 
