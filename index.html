@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--Fuente de google-->
-<!-- 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto-Slab"> -->
-
+    <!-- ANIMACIONES  -->
+    <link rel="stylesheet" href="css/magic.min.css">
+    <!-- HOJA DE ESTILO -->
     <link rel="stylesheet" href="css/style.css">
     <title>RollingGames</title>
 </head>
@@ -19,7 +20,8 @@
     <header>
         <nav class="navbar navbar-light bg-light fixed-top ">
             <div class="container-fluid">
-                <a class="navbar-brand fs-3" href="index.html">Rolling Games</a>
+                <a class="navbar-brand fs-3" href="index.html"><img src="/img/ROLLING__1_-removebg-preview.png"
+                        alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -69,109 +71,299 @@
 
     <section class="home container-fluid p-0 mt-5" id="home">
         <img src="./img/home.png" alt="">
-        <div class="home-text">
+        <div class="home-text magictime vanishIn">
             <h1>CITY OF THE <br>FUTURE </h1>
-            <a href="pages/error.html" class="btn"> Disponible AHORA</a>
+            <a href="pages/error.html" class="btn btn-disponible"> Disponible AHORA</a>
         </div>
 
     </section>
 
     <!--SECCION JUEGOS EN TENDENCIA-->
     <section class="tendencia cointainer" id="tendencia">
-        <div class="tituloTendencia">
+        <div class="tituloTendencia magictime swap">
             <i class='bx bxs-flame'></i>
             <h2 class="display-3">Juegos en tendencias</h2>
         </div>
-        <!--JUEGOS-->
-
     </section>
+    <!--JUEGOS-->
 
-    <div class="container">
+    <div class="container pb-5">
         <div class="row">
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending3.jpg" alt="">
-
+            <div class="lista-juegos">
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending4.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.5</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Ghost of Tsushima: Legends</span>
+                            </div>
+                            <div class="precio">$60</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending1.webp" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending2.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.1</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Battefield 2042</span>
+                            </div>
+                            <div class="precio">$40</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending2.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending3.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.6</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Asassin´s Creed:Valhalla</span>
+                            </div>
+                            <div class="precio">$60</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending4.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending1.webp" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.7</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Cyber Punk 2077</span>
+                            </div>
+                            <div class="precio">$59.99</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending5.png" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending6.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.2</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Dying Light 2: Stay Human</span>
+                            </div>
+                            <div class="precio">$39.90</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending8.png" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending7.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>3.9</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Halo Infinite </span>
+                            </div>
+                            <div class="precio">$29.99</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending6.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/trending8.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.6</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Residen7 Evil: VILLAGE</span>
+                            </div>
+                            <div class="precio">$49.99</div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/trending7.png" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/fifa23.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.3</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">FIFA 23</span>
+                            </div>
+                            <div class="precio">$59.99</div>
                         </div>
                     </div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/codWarfame.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.0</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Call of Duty:Modern Warfame II</span>
+                            </div>
+                            <div class="precio">$19.99</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/spiderman2.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.0</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Spiderman: Miles Morales</span>
+                            </div>
+                            <div class="precio">$24.99</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/dbz.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.9</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Dragon Ball Z: KAKAROT</span>
+                            </div>
+                            <div class="precio">$35.99</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/onepiece.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>2.1</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">One Piece: World Sekker</span>
+                            </div>
+                            <div class="precio">$11.99</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example" class="mb-5">
+        <ul class="pagination d-flex justify-content-center">
+          <li class="page-item"><a class="page-link" href="./pages/error.html">Anterior</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">3</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">Siguiente</a></li>
+        </ul>
+      </nav>
+
+    <!--FIN DE SECCION JUEGOS EN TENDENCIA-->
+
+    <!-- JUEGO DESTACADO -->
+    
+    <div class="container-fluid py-4 ">
+        <div class="tituloTendencia magictime swap">
+            <i class='bx bxs-medal'></i>
+            <h2 class="display-3">Destacado del mes de DICIEMBRE</h2>
+        </div>
+        <div class="row fondoKratos">
+            <div class="juegoDestacado">
+                <div class="col-xl-5 col-sm-12" id="videoDestacado"> <video
+                        src="img/God of War Ragnarök _ Tráiler cinematográfico _Padre e hijo_.mp4" autoplay muted loop></video></div>
+                <div class="col-xl-7" id="infoDestacado">
+                    <div class="nombreDestacado">God of war: <span>RAGNAROK</span></div>
+                    <div class="categoriaDestacado">Categoria:Aventura/Accion</div>
+                    <br>
+                    <div class="descripcionDestacado"> Atreus, ahora adolescente, aún busca respuestas sobre su
+                        identidad como Loki, así como una forma de evitar que suceda el Ragnarök. Para descubrir la
+                        verdad, Kratos y Atreus buscarán al dios nórdico de la guerra, Tyr, que se creía muerto.
+                        Mientras atraviesan los nueve reinos, el dúo debe enfrentar nuevas amenazas, incluido Thor, el
+                        enfurecido Dios del Trueno
+                    </div>
+                    <div class="btn btn-ragnarok mt-3">ver mas</div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 
-    <!--FIN DE SECCION JUEGOS EN TENDENCIA-->
+    <!-- SECCION BANNER DE INFORMACION(Descarga rapida, atencion al cliente,etc...) -->
+
     <div class="container-fluid contenedorbanner py-3">
         <div class="container msjPromo">
             <div class="row">
@@ -198,115 +390,190 @@
             </div>
         </div>
     </div>
+    
+    <!-- FIN DE SECCION INFORMACION -->
 
-    <!--JUEGOS GRATIS SECCION-->
+    <!--SECCION JUEGOS GRATIS -->
 
     <section class="tendencia cointainer" id="tendencia">
         <div class="tituloTendencia">
             <i class='bx bxs-game'></i>
-            <h2 class="display-3">Juegos FREE TO PLAY</h2>
+            <h2 class="display-3 magictime slideDownReturn">Juegos MOBILE</h2>
         </div>
-        <!--JUEGOS-->
 
     </section>
 
-    <div class="container">
+    <div class="container pb-5">
         <div class="row">
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new1.jpg" alt="">
-
+            <div class="lista-juegos">
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new1.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.5</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Subway Surfer</span>
+                            </div>
+                            <div class="precio"><a href="./img/new1.jpg" download=""><i class='bx bxs-download'></i></a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new3.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new2.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.0</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Call of Duty: Mobile</span>
+                            </div>
+                            <div class="precio"><a href="./img/new2.jpg" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new4.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new3.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>3.7</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">FREE GUY</span>
+                            </div>
+                            <div class="precio"><a href="./img/new3.jpg" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new2.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new4.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.4</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">CLASH ROYALE</span>
+                            </div>
+                            <div class="precio"><a href="./img/new4.jpg" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new5.png" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new5.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.1</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">MINECRAFT</span>
+                            </div>
+                            <div class="precio"><a href="./img/new5.jpg" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new8.jpg" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new6.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>3.9</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">PUBG:Mobile</span>
+                            </div>
+                            <div class="precio"><a href="./img/new6.png" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new7.png" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new7.png" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>4.3</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">Fornite Mobile</span>
+                            </div>
+                            <div class="precio"><a href="./img/new7.png" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
-                <div class="catalogoTendencia ">
-                    <div class="card-body">
-                        <div class="box">
-                            <img src="./img/new6.png" alt="">
-
+                <div class="col-sm-6 col-lg-3 col-md-4 col-lg-3 col-xl-3">
+                    <div class="item">
+                        <a class="cover video" href="#">
+                            <picture>
+                                <img class="picture" src="img/new8.jpg" alt="">
+                            </picture>
+                            <div class="descuento">
+                                <i class='bx bxs-star'>3.8</i>
+                            </div>
+                        </a>
+                        <div class="informacion">
+                            <div class="text">
+                                <span class="nombre">MARVEL Contest of Champions</span>
+                            </div>
+                            <div class="precio"><a href="./img/new8.jpg" download=""><i class='bx bxs-download'></i></a></div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <!--Banner video GOD OF WAR -->
-
-    <div class="container mt-5 d-none" id="video">
-        <video src="img/God of War Ragnarök _ Tráiler cinematográfico _Padre e hijo_.mp4" muted autoplay></video>
-    </div>
-
+    <nav aria-label="Page navigation example" class="mb-5">
+        <ul class="pagination d-flex justify-content-center">
+          <li class="page-item"><a class="page-link" href="./pages/error.html">Anterior</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">3</a></li>
+          <li class="page-item"><a class="page-link" href="./pages/error.html">Siguiente</a></li>
+        </ul>
+      </nav>
 
     <!-- ONDA SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#FFD60A" fill-opacity="1"
-            d="M0,224L48,234.7C96,245,192,267,288,250.7C384,235,480,181,576,181.3C672,181,768,235,864,234.7C960,235,1056,181,1152,154.7C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-        </path>
-    </svg>
+
     <!--FOOTER-->
     <footer class=" pt-0 pb-4 mt-0 text-dark" id="footer">
         <div class="container text-center text-md-left">
@@ -314,13 +581,10 @@
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter"> Rollin GAMES</h5>
                     <p> <span class=" fw-bold">ROLLING-GAMES</span> es una plataforma de distribución digital de
-                        videojuegos desarrollada por estudiantes de RollinCode
-                        Corporation. Fue lanzada en Diciembre de 2022 como una forma para Rlling de proveer
-                        actualizaciones automáticas a sus juegos, pero finalmente se amplió para incluir juegos de
-                        terceros.</p>
+                        videojuegos desarrollada por estudiantes de RollingCode.</p>
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Cursos</h5>
+                    <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Categorias</h5>
                     <p>
                         <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Accion</a>
                     </p>
