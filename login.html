@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--Fuente de google-->
 
@@ -17,94 +18,63 @@
 
 <body>
     <header>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light p-3" id="menu">
-            <div class="container-fluid">
-                <!--==============================
-                    =============== AGREGAR EL LOGO================== -->
-                <a class="navbar-brand text-wrap" href="../index.html">
-                    <span class="text-black-50 fs-5 fw-bold ">ProyectoGame</span>
+        <nav class="navbar navbar-light bg-light" id="menu" ">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-wrap " href="../index.html">
+                    <img src="../img/logo.png" width="58px" height="58px alt="logo">
+                    <span class="text-black-70  fs-3 fw-bolder ">RollingGamer</span>
                 </a>
-
-                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="../index.html"><button type="button"
-                                class="btn btn-outline-light btnSus">
-                               Inicio
-                            </button></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="contacto.html"><button type="button"
-                                class="btn btn-outline-light btnSus" >
-                                Contacto
-                            </button></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="nosotros.html"> <button type="button"
-                                class="btn btn-outline-light btnSus">
-                                    Acerca de nosotros
-                                </button></a>
-                        </li>
-                        <li class="nav-item alignButton">
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-outline-light btnSus" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop" id="suscribirse" >
-                                Suscribirse
-                            </button>
-                        </li>
-
-                        <li class="nav-item alignButton">
-                            <!-- Button trigger modal -->
-                            <a href="login.html"> <button type="button" class="btn btn-outline-light btnSus"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                    Login
-                                </button></a>
-                        </li>
-
-                    </ul>
-                  
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-black-50 text-center" id="offcanvasNavbarLabel">RollingGames
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item  ms-auto mb-2 mb-lg-0 ">
+                                <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorias
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Acción</a></li>
+                                    <li><a class="dropdown-item" href="#">Shooter</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Aventura</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
+       
         </nav>
     </header>
     <!-- Modal -->
-    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Subscripcion a RollingGamer</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" >
-                    <form class="d-flex flex-column">
-                        <label for="Email">Agrega tu email para suscribirte</label>
-                        <input type="text" name="nombre y apellido" id="email"> <br>
-                        <label for="Email">Apellido y nombre</label>
-                        <input type="text" name="nombre@gmail.com" id="nombre">
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Suscribirme</button>
-                    <button type="button" class="btn btn-primary">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container bg-light rounded-3 shadow">
-        <div class="row mt-5 align-items-stretch">
+    
+    <div class="container bg-white my-5">
+        <div class="row mt-5 align-items-stretch ">
 
 
-            <div class="col p-5 ">
+            <div class="col m-3">
                 <div class="text-center">
                     <img src="../img/logo.png" width="58px" alt="logo">
                 </div>
@@ -113,11 +83,11 @@
                 <form action="#">
                     <div class="mb-4">
                         <input type="email" class="form-control mt-3" name="email"
-                            placeholder="Ingrese su email o numero de telefono" required>
+                            placeholder="Ingrese su email" required>
 
                     </div>
                     <div class="mb-4">
-                        <input type="password" class="form-control mt-3" name="password" placeholder="Password" required>
+                        <input type="password" class="form-control mt-3" name="password" placeholder="Contraseña" required>
 
 
                     </div>
@@ -127,41 +97,39 @@
 
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary" onclick="id='index.html'" >Iniciar sesion</button>
+                        <button type="submit" class="btn btn-primary" >Iniciar sesion</button>
                     </div>
                     <div class="my-3">
                         
 
                         <!-- Button trigger modal -->
-                        <a class="alogin p-5" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Recuperar
-                            contraseña</a>
-
-                        <!----------------------------------------------------------------------------------------------------
-                         ----------------------------------------------- MODAL ---------------------------------------------->
-
-                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalToggleLabel">Recupera tu contraseña</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <input class="w-100" type="email" name="email" id=""
-                                            placeholder="Ingresa tu email de reespaldo">
-                                        <span class="form-text">Enviaremos un codigo de seguridad al email
-                                            ingresado</span>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-                                            data-bs-toggle="modal">Enviar código</button>
-                                    </div>
+                        
+                        <a class="alogin p-4" data-bs-toggle="modal registro" href="#staticBackdrop" role="button">Regristrarse</a>
+                        
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Subscripcion a RollingGamer</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" >
+                                    <form class="d-flex flex-column">
+                                        <label for="Email">Agrega tu email para suscribirte</label>
+                                        <input type="text" name="nombre y apellido" id="email"> <br>
+                                        <label for="Email">Apellido y nombre</label>
+                                        <input type="text" name="nombre@gmail.com" id="nombre">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Suscribirme</button>
+                                    <button type="button" class="btn btn-primary">Cerrar</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                
                         <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
                             aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                             <div class="modal-dialog modal-dialog-centered">
@@ -189,8 +157,65 @@
                                 </div>
                             </div>
                         </div>
+                        <a class="alogin p-5" data-bs-toggle="modal" href="#exampleModalToggle" role="button">¿Olvidaste la contraseña?</a>
 
-                        <a href="#staticBackdrop" class="alogin p-5">Registrate</a>
+                        <!----------------------------------------------------------------------------------------------------
+                         ----------------------------------------------- MODAL ---------------------------------------------->
+
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalToggleLabel">Registro de usuario</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="w-100" type="email" name="email" id=""
+                                            placeholder="Ingresa tu email ">
+                                        <span class="form-text">Ingresa email</span>
+                                        <input class="w-100" type="password" name="contraseña" id=""
+                                        placeholder="Ingresa tu contraseña ">
+                                        <span class="form-text">Contraseña</span>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Regristrarse</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalToggleLabel2">Enviar</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="w-100 my-2 py-2" type="text" name="codigo" id=""
+                                            placeholder="Ingresa el codigo">
+                                        <input class="w-100 my-2 p-2" type="password"
+                                            name="password2 id="" placeholder=" Nueva contraseña">
+
+                                        <input class="w-100 my-2 p-2" type="password" name="password2" id=""
+                                            placeholder="Repite tu contraseña">
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-bs-dismiss="" id="#exampleModalToggle"
+                                            data-bs-toggle="modal">Guardar cambios</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </form>
@@ -203,7 +228,7 @@
             <!----------------------------------------------------------------------------------------------------
              ----------------------------------------- IMG DERECHA ---------------------------------------------->
 
-            <div class="col  p-5 bg rounded-bottom  imgLogin ">
+            <div class="col d-flex m-1 p-1">
                 <img src="../img/login-img.jpg" class="img-fluid img-thumbnail" alt="imagen-login" id="img-login">
 
             </div>
@@ -215,7 +240,7 @@
 <!-- =====================================================================
 =========================FOOTER=================================== -->
 
-<footer class=" pt-0 pb-4 mt-0 text-dark" id="footer">
+<footer class=" pt-0 pb-4 mt-0 text-dark " id="footer">
     <div class="container text-center text-md-left">
         <div class="row text-center text-md-left">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">

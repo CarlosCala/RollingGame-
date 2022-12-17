@@ -60,7 +60,7 @@ section {
 .home-text a {
     background-color: #ef476f;
 }
-
+/*
 .btn {
     background: var(--bg-color);
     color: #EDF2F4;
@@ -76,7 +76,7 @@ section {
     background: #EDF2F4;
     color: #000814;
     transition: 0.3s all linear;
-}
+}/*
 
 /*tituloTendencia*/
 .tituloTendencia {
