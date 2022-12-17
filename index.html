@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light fixed-top ">
+        <nav class="navbar navbar-light bg-light fixed-top " id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand fs-3" href="index.html"><img src="/img/ROLLING__1_-removebg-preview.png"
                         alt=""></a>
@@ -42,7 +42,7 @@
                                 <a class="nav-link" href="pages/login.html">LOGIN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin.html">Admin</a>
+                                <a class="nav-link " href="admin.html  ">Admin</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
@@ -59,10 +59,13 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <form class="d-flex mt-3">
+                            <input class="form-control me-2"  placeholder="Buscar" aria-label="Buscar" id="buscador">
+                            <button class="btn btn-outline-success" id="botonBuscar">Buscar</button>
                         </form>
+                        <ul id="resultado">
+                            
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -681,7 +684,7 @@
 
 
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="/"></script> -->
+    <script src="js/app.js" ></script>
 </body>
 
 </html>
