@@ -121,3 +121,7 @@ table {
     background-color: #FAF102;
     color: #000814;
 }
+
+.productoDestacado {
+    background-color: #F29F05 !important;
+}
