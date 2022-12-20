@@ -1,11 +1,13 @@
 export class Producto {
-   constructor(codigo, producto, descripcion, categoria, publicado, url) {
+   constructor(codigo, producto, descripcion, categoria, publicado, url, destacado = false ) {
       this.codigo = codigo;
       this.producto = producto;
       this.descripcion = descripcion;
       this.categoria = categoria;
       this.publicado = publicado
       this.url = url;
+      this.destacado = destacado;
+
    }
 
 
@@ -36,6 +38,9 @@ get mostrarCategoria () {
    return this.url;
 }
 
+get mostrarDesctacado() {
+   return this.destacado;
+}
 
  // setters para modificar el producto 
  set modificarCodigo(codigo) {
@@ -55,6 +60,10 @@ get mostrarCategoria () {
 }
  set modificarUrl(url) {
    this.url = url;
+}
+
+set modificarDestacado(destacado) {
+   this.destacado = destacado;
 }
 
 };
