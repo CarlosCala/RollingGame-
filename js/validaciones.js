@@ -1,4 +1,3 @@
-// validaciones Perrrros
 
 export const campoRequerido = (input) => {
     // console.log('desde campo requerido');
