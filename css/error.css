@@ -7,6 +7,14 @@
   margin-left: -400px;
   margin-top: -240px;
 }
+.navbar {
+  background-color: #FAF102 !important;
+}
+
+.navbar img {
+  width: 10rem;
+  height: 3rem;
+}
 .st0 {
   fill-rule: evenodd;
   clip-rule: evenodd;
