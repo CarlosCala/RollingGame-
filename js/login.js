@@ -12,6 +12,7 @@ class Usuario {
   }
 }
 
+
 const guardarUsuario = function (e) {
   e.preventDefault();
   let nombre = document.getElementById("textName").value;
@@ -19,7 +20,7 @@ const guardarUsuario = function (e) {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let password2 = document.getElementById("password2").value;
-
+ 
   //VALIDAR CONTRASEÑAS
   if (password !== password2) {
     return alert("Las contraseñas no coinciden.");
@@ -38,52 +39,52 @@ const guardarUsuario = function (e) {
   usuarios.push(new Usuario(nombre, apellido, email, password));
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
   document.getElementById("formRegistro").reset();
-  alert("Usuario registrado con éxito.");
-  location.replace("../index.html");
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Bienvenido Rolling Gamer',
+    showConfirmButton: false,
+    timer: 2000
+  }) 
 };
 
 document.getElementById("formRegistro");
-addEventListener("submit", guardarUsuario);
+addEventListener("submit",guardarUsuario);
+
 let usuario = JSON.parse(localStorage.getItem("usuarios")) || [];
 let logUser = JSON.parse(localStorage.getItem("userLogin"));
 
-function handleSubmit(e) {
+
+function handleSubmit(e) 
+{
   e.preventDefault();
   console.log("funcion start")
   let emailLogin = document.querySelector("#emailLogin").value;
   let pass = document.querySelector("#passLogin").value;
+  
   //buscamos el correo del usuario
   let validacion = usuario.find((user) => {
     return user.email === emailLogin;
-    console.log(validacion) 
   });  
-  if (validacion) {    
-    if (validacion.password === pass) {      
-      //guardamos la sesion del usuario
-      localStorage.setItem("userLogin", JSON.stringify(validacion));      
-      if(window.location.pathname.split("/").pop()=='index.html'){
-        location.replace("./index.html");
-      }else{
-        location.replace("../index.html");
+  if (validacion)
+  {    
+      if (validacion.password === password2) 
+      {      
+        //guardamos la sesion del usuario
+        localStorage.setItem("userLogin", JSON.stringify(validacion));      
+        if(window.location.pathname.split("/").pop()=='index.html'){
+          location.replace("./index.html");
+        }else{
+          location.replace("../index.html");
+        }
+        
+      } else {
+        alert("El correo o password son incorrectos");
       }
-      
     } else {
       alert("El correo o password son incorrectos");
     }
-  } else {
-    alert("El correo o password son incorrectos");
-  }
 }
-
-function cerrarSesion() {
-  localStorage.removeItem("userLogin");
-  if(window.location.pathname.split("/").pop()=='index.html'){
-    location.replace("./index.html");
-  }else{
-    location.replace("../index.html");
-  }
-}
-
 function recuperarCuenta(){
   let imputCorreo = document.getElementById('emailRecu').value;
   // console.log(imputCorreo)
@@ -104,7 +105,16 @@ function recuperarCuenta(){
 }
 }
 
-document.getElementById("form-login").addEventListener("submit", handleSubmit);
+function cerrarSesion() {
+  localStorage.removeItem("userLogin");
+  if(window.location.pathname.split("/").pop()=='index.html'){
+    location.replace("./index.html");
+  }else{
+    location.replace("../index.html");
+  }
+}
+
+/*
 
 function modificarNav() {
   if (logUser) {
@@ -142,3 +152,4 @@ function modificarNav() {
 }
 
 modificarNav();
+*/

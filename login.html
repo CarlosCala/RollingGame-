@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--Fuente de google-->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto-Slab">
+ 
+    <!--SWETALERT-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <title>LOGIN</title>
 </head>
 
 <body>
@@ -65,17 +64,39 @@
                             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                             <button class="btn btn-outline-success" type="submit">Buscar</button>
                         </form>
+                        <form action="#">
+                      
+                            <br><br> <a class="nav-item  text-dark" data-bs-toggle="modal" href="#cerrarSesion" role="button" >cerrar seccion</a>
+
+                            <div class="modal fade" id="cerrarSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header bg-light">
+                                      <h5 class="modal-title text-dark" id="exampleModalLabel">¿Realmente quieres cerrar la sesión?</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body bg-light">
+                                        <button type="button" class="btn btn-outline-primary text-dark" data-bs-dismiss="modal" onclick="cerrarSesion()">Cerrar sesión</button>
+                                      <button type="submit" class="btn btn-outline-danger  text-dark" data-bs-dismiss="modal">Cancelar</button>
+                                    
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </form>
                     </div>
                 </div>
             </div>
        
         </nav>
     </header>
-    <!-- Modal -->
+    <!------------------------------------------------------- MODAL DE INICIO DE SECCION --------------------------------------------------->
     
-    <div class="container bg-white my-5">
-        <div class="row mt-5 align-items-stretch ">
+    <div class="container bg-white my-5 ">
 
+    
+        <div class="row mt-5 align-items-stretch">
 
             <div class="col m-3">
                 <div class="text-center">
@@ -84,9 +105,10 @@
                 <h1 class="text-center">Bienvenido</h1> <br>
 
                 <form action="#">
+               <form action="#" id="form-login"></form>
                     <div class="mb-4">
                         <input type="email" class="form-control mt-3" name="email"
-                            placeholder="Ingrese su email" id="Usuario" required > <br>
+                            placeholder="Ingrese su email" id="emailLogin" required > <br>
 
                     </div>
                     <div class="mb-4">
@@ -95,26 +117,28 @@
 
                     </div> 
              
-                    <div class="d-grid ">
-                        <button type="submit" class="btn btn-primary" >Iniciar sesion</button>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary" > Iniciar sesion </button><br>
                     </div>
+                </form><br>
+                
                     <div class="my-3">
                         
 
                         <!------------------------------------------ MODAL DE REGISTRO----------------------------------->
-                        <a class="alogin p-5" data-bs-toggle="modal" href="#loginModal"  role="button">¿No tienes una cuenta?</a>
+                        <a class="alogin p-5" data-bs-toggle="modal" href="#modalReg"  role="button">¿No tienes una cuenta?</a>
                       
-                        <div class="modal fade" id="loginModal"  tabindex="-1"
+                        <div class="modal fade" id="modalReg"  tabindex="-1"
                         aria-labelledby="exampleModalToggleLabel" aria-hidden="true" >
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="loginModal">Subscripcion a RollingGamer</h5>
+                                    <h5 class="modal-title" >Subscripcion a RollingGamer</h5>
 
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" >
-                                    <form class="d-flex flex-column">
+                                    <form class="d-flex flex-column" id="formRegistro">
                                         <label for="text">Nombre</label>
                                         <input type="text" class="form-control" name="nombre y apellido" id="textName" > <br>
                                         <label for="text">Apellido </label>
@@ -125,23 +149,24 @@
                                         <input type="password" class="form-control" name="password1"  id="password"> <br>
                                         <label for="password2"> Repetir Contraseña</label>
                                         <input type="password" class="form-control" name="password2"  id="password2"> <br>
-                                    </form>
+                                    
                                 </div>
                                 <div class="modal-footer"> 
                                     <button type="button" class="btn btn-outline-danger" >Cancelar</button>
-                                    <button type="submit" class="btn btn-outline-primary" data-bs-dismiss="modal" >Registrarme</button>
+                                    <button type="submit" class="btn btn-outline-primary" data-bs-dismiss="modal" id="reg" >Registrarme</button>
                                    
                                 </div>
+                            </form>
                             </div>
                         </div>
                     
                                 </div>
-                        <a class="alogin p-5" data-bs-toggle="modal" href="#recuCuenta" role="button">¿Olvidaste la contraseña?</a>
+                        <a class="alogin p-2" data-bs-toggle="modal" href="#recuCuenta" role="button">¿Olvidaste la contraseña?</a>
                         <!----------------------------------------------------------------------------------------------------
                          ----------------------------------------------- MODAL DE RECUPERACION DE CONTRASEÑA  ---------------------------------------------->
 
                         <div class="modal fade" id="recuCuenta" aria-hidden="true"
-                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1" >
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
                                     <div class="modal-header">
