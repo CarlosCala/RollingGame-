@@ -224,7 +224,7 @@ function modificarProducto() {
  let indiceProducto = listaProducto.findIndex((itemProducto) => {
 
   juegoPublicado = "publicado";
-}
+})
 function modificarProducto() {
   //  encontrar la posicion del elemento que quiero modificar dentro del array de productos
   let indiceProducto = listaProducto.findIndex((itemProducto) => {
@@ -287,4 +287,3 @@ window.borrarProducto = function (codigo) {
     }
   });
 }
-
