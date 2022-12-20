@@ -258,6 +258,7 @@ function borrarTabla() {
 }
 // preparar para borrar producto
 window.borrarProducto = function (codigo) {
+
   Swal.fire({
     title: 'estas seguro que deseas eliminarlo',
     text: "esta accion no podra ser revertida",
@@ -286,4 +287,5 @@ window.borrarProducto = function (codigo) {
       )
     }
   });
+
 }
