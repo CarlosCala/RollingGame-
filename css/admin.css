@@ -22,7 +22,7 @@
 }
 
 body {
-    background-image: url(../img/administrador.jpg) ;
+    background-image: url(../img/administrador.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -31,6 +31,10 @@ body {
 
 .navbar {
     background-color: #FFD60A !important;
+}
+.navbar img {
+    width: 10rem;
+    height: 3rem;
 }
 
 .nuevoJuego {
@@ -97,20 +101,19 @@ body {
 svg {
     visibility: hidden;
     position: absolute;
-    width=0;
-    height=0;
+    width:0;
+    height:0;
 
 }
 
 
 table {
-    font-size: ;
     font-family: 'Kanit', sans-serif;
-    background: var(--font-color2) ;
+    background: var(--font-color2);
     border: 5px solid black;
 }
 
-/* btn publicado */ 
+/* btn publicado */
 .btnAdm {
     padding: 10px 15px;
     background-color: #003566;
