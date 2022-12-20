@@ -25,6 +25,7 @@ body {
     background-image: url(../img/administrador.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment:fixed;
     color: #001D3D;
 }
 
@@ -122,4 +123,8 @@ table {
 .btnAdm:hover {
     background-color: #FAF102;
     color: #000814;
+}
+
+.productoDestacado {
+    background-color: #F29F05 !important;
 }
