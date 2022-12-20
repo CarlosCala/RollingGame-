@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Fuente de google-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto-Slab"> -->
     <!-- ANIMACIONES  -->
     <link rel="stylesheet" href="css/magic.min.css">
     <!-- HOJA DE ESTILO -->
@@ -63,9 +65,17 @@
                             <input class="form-control me-2"  placeholder="Buscar" aria-label="Buscar" id="buscador">
                             <button class="btn btn-outline-success" id="botonBuscar">Buscar</button>
                         </form>
+
                         <ul id="resultado">
                             
                         </ul>
+                      <form action="#">
+                      
+                            <br><br> <a class="nav-item  text-dark  " data-bs-toggle="modal" href="#cerrarSesion" role="button" id="btnCerrarS">cerrar sesion</a>
+
+
+                       </form>
+
                     </div>
                 </div>
             </div>
@@ -358,7 +368,7 @@
                         Mientras atraviesan los nueve reinos, el dúo debe enfrentar nuevas amenazas, incluido Thor, el
                         enfurecido Dios del Trueno
                     </div>
-                    <div class="btn btn-ragnarok mt-3">ver mas</div>
+                    <div class="btn btn-ragnarok mt-3"><a href="pages/destacado.html" class="text-decoration-none text-dark">ver mas</a> </div>
                 </div>
             </div>
         </div>
@@ -677,14 +687,28 @@
 
 
     </footer>
-
-    </div>
-
-
-
+    <div class="modal fade" id="cerrarSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-light">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">¿Realmente quieres cerrar la sesión?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-light">
+                <button type="button" class="btn btn-outline-primary text-dark" data-bs-dismiss="modal">Cerrar sesión</button>
+              <button type="submit" class="btn btn-outline-danger  text-dark" data-bs-dismiss="modal">Cancelar</button>
+            
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js" ></script>
 </body>
 
+
+    
+</body>
 </html>

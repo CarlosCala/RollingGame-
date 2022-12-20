@@ -1,5 +1,5 @@
-// validaciones 
 
+// validaciones 
 export const campoRequerido = (input) => {
     // console.log('desde campo requerido');
     // console.log(input.value);
