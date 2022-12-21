@@ -14,25 +14,17 @@ export const campoRequerido = (input) => {
       return false;
     }
   };
-
   export const validarEmail = (input) => {
     let patron =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;
 
     if (patron.test(input)) {
       return true
     } 
-
   }
- 
-  export const validarUrl = (input) => {
-    // vamos a crear una expresion regular, guardar en una variable
+   export const validarUrl = (input) => {
+      let patron = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
   
-    let patron = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
-  
-    // el metodo test te devuelve true o false si matchea o no
-    //regex.test(string a validar)
-  
-    if (patron.test(input.value)) {
+      if (patron.test(input.value)) {
       // cuando se cumpla con el match
       input.className = "form-control is-valid";
       return true;

@@ -1,10 +1,8 @@
 import { validarEmail } from "./validaciones.js";
 
-
 let btnIniciar = document.getElementById("IniciarSesion");
 let btnCerrar = document.getElementById("btnCerrarS");
 let btnRegistrarme = document.getElementById("reg");
-
 
 btnRegistrarme.addEventListener("click", guardarUsuario)
 btnIniciar.addEventListener("click", handleSubmit)
@@ -45,9 +43,7 @@ function guardarUsuario(e) {
         "El correo ya esta registrado. Inicie sesion con su email y contraseña."
       );
     }
-  
-  
-      usuarios.push(new Usuario(nombre, apellido, email, password));
+        usuarios.push(new Usuario(nombre, apellido, email, password));
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
       document.getElementById("formRegistro").reset();
       Swal.fire({
@@ -67,8 +63,6 @@ function guardarUsuario(e) {
     return false
   }
   }
-
-
 
 document.getElementById("formRegistro");
 addEventListener("submit", guardarUsuario);
@@ -105,34 +99,34 @@ function handleSubmit(e)
 }
   
 
-function recuperarCuenta() {
-  let imputCorreo = document.getElementById('emailRecu').value;
-  // console.log(imputCorreo)
+// function recuperarCuenta() {
+//   let imputCorreo = document.getElementById('emailRecu').value;
+//   // console.log(imputCorreo)
 
 
-  let email = usuario.find((x) => x.email == imputCorreo).email || [];
-  // console.log(email)
+//   let email = usuario.find((x) => x.email == imputCorreo).email || [];
+//   // console.log(email)
 
-  if (email) {
-    if (email === imputCorreo) {
-      alert('Le enviamos un mail con la informacion necesaria para recuperar su cuenta')
-    }
-    else {
-      alert('El correo ingresado no es valido');
-    }
-  } else {
-    alert('El correo ingresado no es valido');
-  }
-}
+//   if (email) {
+//     if (email === imputCorreo) {
+//       alert('Le enviamos un mail con la informacion necesaria para recuperar su cuenta')
+//     }
+//     else {
+//       alert('El correo ingresado no es valido');
+//     }
+//   } else {
+//     alert('El correo ingresado no es valido');
+//   }
+// }
 
-function cerrarSesion() {
-  localStorage.removeItem("userLogin");
-  if (window.location.pathname.split("/").pop() == 'index.html') {
-    location.replace("../index.html");
-  } else {
-    location.replace("../index.html");
-  }
-}
+// function cerrarSesion() {
+//   localStorage.removeItem("userLogin");
+//   if (window.location.pathname.split("/").pop() == 'index.html') {
+//     location.replace("../index.html");
+//   } else {
+//     location.replace("../index.html");
+//   }
+// }
 
 
 

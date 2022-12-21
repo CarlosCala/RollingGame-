@@ -13,7 +13,6 @@ let templateParams = {
     destinatario: "carlosdev52@gmail.com",
     message:  `${consulta.value}` ,
 };
-
 function enviarMail(e) {
     e.preventDefault();
     console.log("probando funcion");

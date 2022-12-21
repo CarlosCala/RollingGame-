@@ -1,14 +1,11 @@
 let listaProducto = JSON.parse(localStorage.getItem("arrayProductoKey")) || []
 
-
 let buscador = document.querySelector("#buscador")
 let botonBuscar = document.querySelector("#botonBuscar")
 let resultado = document.querySelector("#resultado")
 let navBar = document.querySelector("#navBar")
 
 navBar.addEventListener("dblclick", LimparLista)
-
-
 
 const filtrar = (e) => {
     resultado.innerHTML = ' '
@@ -22,11 +19,10 @@ const filtrar = (e) => {
             if (nombre.indexOf(texto) !== -1) {
                 resultado.innerHTML += `
         <li>
-                                <a href="" class="linksBusqueda">
-                                    ${producto.producto} - Categoria : ${producto.categoria}
-                                </a>
-                            </li>
-        `
+             <a href="" class="linksBusqueda">
+                  ${producto.producto} - Categoria : ${producto.categoria}
+             </a>
+        </li>`
             }
         }
         for (let producto of listaProducto) {
@@ -38,24 +34,19 @@ const filtrar = (e) => {
                   ${producto.producto} - Categoria : ${producto.categoria}
             </a>
         </li>`
-            }
+    }
         }
         if (resultado.innerHTML === ' ') {
             resultado.innerHTML = `
-    <li>producto no encontrado... </li>
-    `
+    <li>producto no encontrado... </li>`
     }
     }
     buscador.value = ''
 }
-
 // filtrar()
-
 botonBuscar.addEventListener("click", filtrar)
 // buscador.addEventListener("keyup", filtrar)
-
 // limpiar lista de busqueda
-
 function LimparLista() {
     resultado.innerHTML = ' '
 }
