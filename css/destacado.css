@@ -275,3 +275,11 @@ body {
     height: auto;
   }
 }
+
+.cartas{
+  gap: 5rem;
+}
+.cartas .card:hover{
+  transform: scaleY(1.01);
+  transition: all 0.1s ease;
+}
