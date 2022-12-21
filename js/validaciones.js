@@ -1,5 +1,5 @@
-// validaciones 
 
+// validaciones 
 export const campoRequerido = (input) => {
     // console.log('desde campo requerido');
     // console.log(input.value);
@@ -14,12 +14,16 @@ export const campoRequerido = (input) => {
       return false;
     }
   };
-  ////////////////////////
-  
 
-  
-  /////////////////
-  
+  export const validarEmail = (input) => {
+    let patron =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;
+
+    if (patron.test(input)) {
+      return true
+    } 
+
+  }
+ 
   export const validarUrl = (input) => {
     // vamos a crear una expresion regular, guardar en una variable
   
@@ -37,17 +41,13 @@ export const campoRequerido = (input) => {
       return false;
     }
   };
-  
-  export const validarGeneral = (
-    // campoCodigo,
-    campoProducto,
+    export const validarGeneral = (
+      campoProducto,
     campoDescripcion,
     campoCategoria,
       campoUrl
   ) => {
     //comprobar que pasen cada una validaciones y si no pasan mostrar el alert
-    // console.log('desde validar general');
-    //console.log(e);
     let alerta = document.querySelector("#msjAlerta");
     if (
        campoRequerido(campoProducto) &&

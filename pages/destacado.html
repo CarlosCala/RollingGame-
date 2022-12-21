@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <!-- Iconos -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!--EFECTOS CON SWIPPER-->
+  <link rel="stylesheet" href="../css/swiper-bundle.css" />
+
+  <!-- HOJA DE ESTILO -->
+  <link rel="stylesheet" href="../css/destacado.css" />
+
+  <title>God of War:Ragnarok</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-light bg-light fixed-top" id="navBar">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3" href="../index.html">
+          <img src="/img/ROLLING__1_-removebg-preview.png" alt="logo de RollingGames">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-black-50 text-center" id="offcanvasNavbarLabel">
+              RollingGames
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/login.html">LOGIN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../admin.html">Admin</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                  <li><a class="dropdown-item" href="#">Acción</a></li>
+                  <li><a class="dropdown-item" href="#">Shooter</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Aventura</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3">
+              <input class="form-control me-2" placeholder="Buscar" aria-label="Buscar" id="buscador" />
+              <button class="btn btn-outline-success" id="botonBuscar">
+                Buscar
+              </button>
+            </form>
+            <ul id="resultado"></ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="home container-fluid p-0 mt-5" id="home">
+    <img src="../img/god.jp" alt="fondo de kratos" />
+    <div class="home-text">
+      <a href="#comprar" class="btn btn-comprar"> Ver opciones de compra</a>
+    </div>
+  </section>
+
+  <section class="capturas my-5" id="capturas">
+    <div class="tituloCapturas">
+      <i class="bx bxs-flame"></i>
+      <h2 class="display-3">Capturas del gameplay</h2>
+    </div>
+    <!--Imagenes slider-->
+    <div class="imagenes swiper mx-4">
+      <div class="swiper-wrapper">
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura1.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/GODDD.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura7.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura2.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura3.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura4.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura5.jpg" alt="" /></div>
+        </div>
+        <!--Slide 1-->
+        <div class="swiper-slide">
+          <div class="imagen"><img src="../img/captura6.jpg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid seccionTrama">
+    <div class="row">
+      <div class="trama col-xl-4">
+        <h1 class="pt-5 display-4">
+          Embárcate en un épico y cordial viaje mientras Kratos y Atreus
+          luchan por aferrarse y soltar
+        </h1>
+        <p class="py-5">
+          Desde Santa Monica Studio llega la secuela del aclamado por la
+          crítica God of War (2018). Fimbulvetr ya está en camino. Kratos y
+          Atreus deben viajar a cada uno de los nueve reinos en búsqueda de
+          respuestas, mientras que las fuerzas asgardianas se preparan para
+          una batalla profetizada que terminará con el mundo. En el camino
+          explorarán paisajes increíbles y míticos, y se enfrentarán a
+          aterradores enemigos en la forma de dioses nórdicos y monstruos. La
+          amenaza del Ragnarök cada vez está más cerca. Kratos y Atreus deben
+          elegir entre su propia seguridad y la seguridad de los reinos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5" id="comprar">
+    <div class="text-center">
+      <h4>Compras dentro de Rollling-Games</h4>
+      <h1>Comprar God of War Ragnarök</h1>
+    </div>
+    <div class="edicionesText">
+      <h1 class="display-3 text-center">EDICIONES</h1>
+    </div>
+  </section>
+  <div class="container my-5">
+    <div class="row cartas">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-auto my-3">
+        <div class="card my-3">
+          <img src="../img/godPortada.jpg" alt="portada del juego" />
+          <div class="titleCard">
+            <h2 class="text-light text-center mt-4">Edicion Standart</h2>
+          </div>
+          <div class="detallesCard text-dark">
+            <div class="listaCard">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">God of War Ragnarök</li>
+              </ul>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="precio">US$39.99</div>
+            <div class="btn comprarAhora"><a href="../pages/error.html">COMPRAR AHORA</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-auto my-3">
+        <div class="card my-3">
+          <img src="../img/godPortada.jpg" alt="portada del juego" />
+          <div class="titleCard">
+            <h2 class="text-light text-center mt-4">Edicion Premium</h2>
+          </div>
+          <div class="detallesCard text-dark">
+            <div class="listaCard">
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">God of War Ragnarök</li>
+                <li class="list-group-item">Armadura de Valle oscuro</li>
+                <li class="list-group-item">Atuendo de Valle oscuro (estético)</li>
+                <li class="list-group-item">Empuñadura de hacha de Valle oscuro</li>
+              </ul>
+              <br><br><br><br><br><br><br>
+            </div>
+            <div class="precio">US$49.99</div>
+            <div class="btn comprarAhora"><a href="../pages/error.html">COMPRAR AHORA</a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-auto my-3">
+        <div class="card my-3">
+          <img src="../img/fondoKratos.jpg" alt="" />
+          <div class="titleCard">
+            <h2 class="text-light text-center mt-4">Edicion Deluxe</h2>
+          </div>
+          <div class="detallesCard">
+            <div class="listaCard">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">God of War Ragnarök</li>
+                <li class="list-group-item">Armadura de Valle oscuro</li>
+                <li class="list-group-item">Atuendo de Valle oscuro (estético)</li>
+                <li class="list-group-item">Empuñadura de hacha de Valle oscuro</li>
+                <li class="list-group-item">Empuñaduras cuchillas de Valle oscuro</li>
+                <li class="list-group-item">Libro de arte digital de Dark Horse</li>
+                <li class="list-group-item">Banda sonora digital oficial</li>
+                <li class="list-group-item">Conjunto de avatares de PSN PS4/PS5</li>
+              </ul>
+            </div>
+            <div class="precio text-dark">US$59.99</div>
+            <div class="btn comprarAhora"><a href="../pages/error.html">COMPRAR AHORA</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <img class="my-5" src="../img/Logo ragnarok.webp" width="100%" alt="">
+  </div>
+
+  <footer class=" pt-0 pb-4 mt-0 text-dark" id="footer">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter"> Rollin GAMES</h5>
+          <p> <span class=" fw-bold">ROLLING-GAMES</span> es una plataforma de distribución digital de
+            videojuegos desarrollada por estudiantes de RollingCode.</p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Categorias</h5>
+          <p>
+            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Accion</a>
+          </p>
+          <p>
+            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Aventura</a>
+          </p>
+          <p>
+            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Shooter</a>
+          </p>
+          <p>
+            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Deporte</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Información</h5>
+          <p>
+            <i class="fas fa-home mr-3"></i> Laprida 390 - San Miguel de Tucumán
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> +54 9 381 555 5555
+          </p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> RollingGames.co@gmail.com
+          </p>
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Redes Sociales</h5>
+          <div class="row align-items-center">
+            <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+                <ul class="list-untyled list-inline">
+                  <li>
+                    <a href="../pages/error.html"> <i class='bx bxl-facebook-circle redes'></i></a>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+                <ul class="list-untyled list-inline">
+                  <li>
+                    <a href="../pages/error.html"> <i class='bx bxl-instagram redes'></i></i></a>
+
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <div class="text-center text-md-right">
+                <ul class="list-untyled list-inline">
+                  <li>
+                    <a href="../pages/error.html"> <i class='bx bxl-twitter redes'></i></a>
+
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <hr class="mb-4">
+      <div class="row align-items-center">
+        <div class="col-md-9 col-lg-12">
+          <p>© Copyright 2022 All Rights Reserved by:
+            <a href="#" style="text-decoration: none;">
+              <strong class="text-dark">ROLLING-GAMES</strong>
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+
+
+    </div>
+    <!--FIN SECCION JUEGOS GRATIS-->
+
+
+
+  </footer>
+
+
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+</body>
+
+</html>

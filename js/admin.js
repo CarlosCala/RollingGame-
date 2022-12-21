@@ -29,7 +29,7 @@ let btnCerrar = document.querySelector("#btnCerrar")
 
 // btn publicado true o false
 
-let juegoPublicado = "no publicado";
+let juegoPublicado = false;
 
 
 campoProducto.addEventListener("blur", () => {
@@ -45,7 +45,7 @@ campoCategoria.addEventListener("blur", () => {
 });
 
 btnPublicado.addEventListener("click", () => {
-  productoPublicado(juegoPublicado)
+  productoPublicado()
 })
 
 
@@ -56,17 +56,19 @@ campoUrl.addEventListener("blur", () => {
 formularioProducto.addEventListener("submit", guardarProducto);
 
 btnCerrar.addEventListener("click", limpiarFormulario);
-
-
 // invoco a carga inicial de lista , si tengo juegos en el local storage los muestra en la tabla
-
-
 cargaInicial()
-cargaInicialModificada()
 // logica del crud
+publicado()
 
 
-
+function publicado() {
+  if (juegoPublicado=== false) {
+    juegoPublicado = "No publicado"
+  } else {
+    juegoPublicado = "publicado"
+  }
+}
 
 function guardarProducto(e) {
   //prevenir el actualizar del submit
@@ -102,8 +104,10 @@ function crearProducto() {
     campoDescripcion.value,
     campoCategoria.value,
     juegoPublicado,
-    campoUrl.value
+    campoUrl.value,
+    false
   );
+
   //guardar cada objeto (producto) en un array de productos
   listaProducto.push(productoNuevo);
   //limpiar formulario
@@ -119,20 +123,12 @@ function crearProducto() {
   )
   // cargar productos en  la tabla
   crearFila(productoNuevo);
-  //  asignar no publicados a los productos nuevamente
-
-  juegoPublicado = "no publicado";
 }
 
-
-
 // funcion limpar el formulario 
-
 function limpiarFormulario() {
   formularioProducto.reset();
-
   //resetear las clases de los imputs
-
   campoCodigo.className = "form-control";
   campoProducto.className = "form-control";
   campoDescripcion.className = "form-control";
@@ -143,122 +139,92 @@ function limpiarFormulario() {
   productoExistente = false;
 };
 
-
 function guardarLocalStorage() {
-
   localStorage.setItem("arrayProductoKey", JSON.stringify(listaProducto))
-
 }
-
-
 
 function crearFila(producto) {
   let tablaProducto = document.querySelector("#tablaProducto");
   // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
-
-  tablaProducto.innerHTML +=
-    `<tr>
-  <th >${producto.codigo}</th>
-  <td>${producto.producto}</td>
+   if(producto.destacado === false){
+    tablaProducto.innerHTML +=
+    `<tr >
+  <th>${producto.codigo}</th>
+  <td id=${producto.codigo}>${producto.producto}</td>
   <td>${producto.descripcion}</td>
   <td>${producto.categoria}</td>
   <td>${producto.publicado}</td>
   <td>${producto.url}</td>
-  <td>
-  <button class="btn btn-light d-flex align-items-centerv my-1" data-bs-toggle="modal" data-bs-target="#cargarJuego" onclick="prepararEdicionProducto('${producto.codigo}')">
+  <td class="d-flex align-items-center g-2">
+  <button class="btn btn-light mx-1" data-bs-toggle="modal" data-bs-target="#cargarJuego" onclick="prepararEdicionProducto('${producto.codigo}')">
     Editar
   </button>
-  <button class="btn btn-dark d-flex align-items-center my-1" onclick="borrarProducto('${producto.codigo}')">
+  <button class="btn btn-dark  mx-1" onclick="borrarProducto('${producto.codigo}')">
     Borrar
   </button>
-  <button class="btn btn-dark d-flex align-items-center my-1 " onclick="destacarProducto('${producto.codigo}')">
+  <button class="btn btn-dark  mx-1 " onclick="destacarProducto('${producto.codigo}')">
   ☆
 </button>
 </td>
-
-  </tr>
-`
-}
-
-
-function crearFilaModificada(producto) {
-  let tablaProducto = document.querySelector("#tablaProducto");
-  // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
-
-  tablaProducto.innerHTML +=
-    `<tr class="table-dark" >
-  <th >${producto.codigo}</th>
-  <td>${producto.producto}</td>
+  </tr>`
+  } else{
+    tablaProducto.innerHTML +=
+    `<tr >
+  <th>${producto.codigo}</th>
+  <td id=${producto.codigo} class='productoDestacado'>${producto.producto + '⭐'}</td>
   <td>${producto.descripcion}</td>
   <td>${producto.categoria}</td>
   <td>${producto.publicado}</td>
   <td>${producto.url}</td>
-  <td>
-  <button class="btn btn-light d-flex align-items-centerv my-1" data-bs-toggle="modal" data-bs-target="#cargarJuego" onclick="prepararEdicionProducto('${producto.codigo}')">
+  <td class="d-flex align-items-center g-2">
+  <button class="btn btn-light mx-1" data-bs-toggle="modal" data-bs-target="#cargarJuego" onclick="prepararEdicionProducto('${producto.codigo}')">
     Editar
   </button>
-  <button class="btn btn-dark d-flex align-items-center my-1" onclick="borrarProducto('${producto.codigo}')">
+  <button class="btn btn-dark  mx-1" onclick="borrarProducto('${producto.codigo}')">
     Borrar
   </button>
-  <button class="btn btn-dark d-flex align-items-center my-1 " onclick="destacarProducto('${producto.codigo}')">
+  <button class="btn btn-dark  mx-1 " onclick="destacarProducto('${producto.codigo}')">
   ☆
 </button>
 </td>
-
-  </tr>
-`
+  </tr>`
+  }
+  // productoPublicado()
 }
-// crear filaDescatada
 
 // destacar fila de tabla 
-window.destacarProducto = function(codigo) {
-
-  // actualizar en el local storage
-
-  guardarLocalStorage();
-  // actualizar la tabla -primero borrar 
-  borrarTabla();
-  // luego actualizarla desde el local storage ya actualizado
-  cargaInicialModificada();
+window.destacarProducto = function (codigo) {
+  let productoBuscado = listaProducto.find((itemProducto) => {
+    return itemProducto.destacado === true;
+  })
+  if(!productoBuscado){
+  let producto = document.getElementById(codigo);
+  producto.className = 'bg-danger';
+  producto.innerHTML += '</br>☆DESTACADO'
+    let indiceProducto = listaProducto.findIndex((itemProducto) => {
+      return itemProducto.codigo === +codigo;
+    });
+    listaProducto[indiceProducto].destacado = true;
+    guardarLocalStorage();
+    borrarTabla();
+    cargaInicial();
+  }
 }
-
 // cargar la tabla conm los datos existentes del LocalStorage
-
 function cargaInicial() {
   if (listaProducto.length > 0)
     //crear fila 
-
     listaProducto.forEach((itemProducto) => {
       crearFila(itemProducto)
-
     }) ;
-
 }
-
-// carga inicial destacada 
-function cargaInicialModificada() {
-  if (listaProducto.length > 0)
-    //crear fila 
-
-    listaProducto.forEach((itemProducto) => {
-      crearFilaModificada(itemProducto)
-
-    }) ;
-
-}
-
 
 window.prepararEdicionProducto = function (codigo) {
   // buscar el producto en el array 
-
   let productoBuscado = listaProducto.find((itemProducto) => {
-
     return itemProducto.codigo == codigo;
-
   })
-
   //mostrar el producto encontrado en el formulario
-
   campoCodigo.value = productoBuscado.codigo;
   campoProducto.value = productoBuscado.producto;
   campoDescripcion.value = productoBuscado.descripcion;
@@ -266,43 +232,30 @@ window.prepararEdicionProducto = function (codigo) {
   juegoPublicado = juegoPublicado;
   campoUrl.value = productoBuscado.url;
   // cambiar la bandera de producto ecistente
-
-
   productoExistente = true;
-
 }
-
 // funcion para alternar el estado del juego Publicado/No publicado
 function productoPublicado() {
-
-  juegoPublicado = "publicado";
-
-  console.log("desde juego publicado");
-
-}
-
+  if( juegoPublicado === "publicado") {
+    return juegoPublicado = "No Publicado"
+   }
+ juegoPublicado = true ;
+ publicado()
+ }
 
 function modificarProducto() {
-
   //  encontrar la posicion del elemento que quiero modificar dentro del array de productos
-
-
-  let indiceProducto = listaProducto.findIndex((itemProducto) => {
-
+ let indiceProducto = listaProducto.findIndex((itemProducto) => {
     // con el parseInt convierto a numero el stgring a comparar ya que el codigo generado por "CODIGO UNICO" era num 
     return itemProducto.codigo === parseInt(campoCodigo.value);
   });
-
   // modificar los valores dentro de los elementos del array
-
   listaProducto[indiceProducto].producto = campoProducto.value;
   listaProducto[indiceProducto].descripcion = campoDescripcion.value;
   listaProducto[indiceProducto].categoria = campoCategoria.value;
   listaProducto[indiceProducto].publicado = juegoPublicado;
   listaProducto[indiceProducto].url = campoUrl.value;
-
   // actualizar en el local storage
-
   guardarLocalStorage();
   // actualizar la tabla -primero borrar 
   borrarTabla();
@@ -314,22 +267,13 @@ function modificarProducto() {
     'Su producto fue modificado con exito ',
     'success'
   );
-
-
-
   limpiarFormulario();
-
-
 }
 
 function borrarTabla() {
-
   let tablaProducto = document.querySelector("#tablaProducto");
-
   tablaProducto.innerHTML = ' '
-
 }
-
 // preparar para borrar producto
 window.borrarProducto = function (codigo) {
 
@@ -343,12 +287,10 @@ window.borrarProducto = function (codigo) {
     confirmButtonText: 'Confirmar!'
   }).then((result) => {
     if (result.isConfirmed) {
-
       let nuevaListaProducto = listaProducto.filter((itemProducto) => {
         return itemProducto.codigo !== parseInt(codigo);
       });
       // actualizar en el arreglo original y el local storage
-
       listaProducto = nuevaListaProducto;
       guardarLocalStorage();
       // actualizar la tabla -primero borrar 
@@ -365,4 +307,3 @@ window.borrarProducto = function (codigo) {
   });
 
 }
-

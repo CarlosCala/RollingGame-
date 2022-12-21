@@ -3140,8 +3140,10 @@ fieldset:disabled .btn {
   background-color: transparent;
 }
 .btn-outline-light {
+  background-color: #003566;
   color: #f8f9fa;
   border-color: #f8f9fa;
+  
 }
 .btn-outline-light:hover {
   color: #000;

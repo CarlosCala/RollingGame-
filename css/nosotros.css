@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-size: cover;
+    background-color: #EDF2F4;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Serif+Pro&display=swap');
+
+
+
+/* COLORES */
+:root {
+    --bg-color: #000814;
+    --bg-color2: #001D3D;
+    --bg-color3: #003566;
+    --font-color: #FFC300;
+    --font-color2: #FFD60A;
+
+}
+
+
+.navbar {
+    background-color: #FAF102 !important;
+}
+
+.navbar img {
+    width: 10rem;
+    height: 3rem;
+}
+
+
+/* ============ ABOUT US ================== */
+.nosotros{
+    background-image: url(../img/about\ us.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0;
+    height: 10vw;
+}
+.nosotros h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 5vw;
+    display: flex;
+    justify-content: start;
+}
+.contenido {
+    background-color: #EDF2F4;
+    padding: 50px;
+}
+.contenido p{
+    font-size: 18px;
+}
+.contenido span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+/* FOOTER */
+/* FOOTER */
+.redes {
+    font-size: 2.5rem;
+    color: #000814;
+}
+
+
+#footer {
+    background-color: var(--font-color2);
+}
+
+#footer .subtituloFooter {
+    background: var(--bg-color2);
+    color: #EDF2F4;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 6% 100%, 0% 50%, 6% 0);
+}
+
+#footer .subtituloFooter:hover {
+    cursor: pointer;
+    background-color: #003670;
+    color: #EDF2F4;
+    transition: 0.3s all ease;
+}
+
+@media screen and (max-width:520px){
+    .imagenFinal{
+        display: none;
+    }
+}

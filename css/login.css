@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Serif+Pro&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* COLORES */
+:root {
+    --bg-color: #000814;
+    --bg-color2: #001D3D;
+    --bg-color3: #003566;
+    --font-color: #FFC300;
+    --font-color2: #FFD60A;
+
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--bg-color);
+    color: #EDF2F4;
+}
+
+.sectionLogin {
+    margin-top: 5rem;
+}
+.navbar {
+    background-color: #FAF102 !important;
+}
+
+.navbar img {
+    width: 10rem;
+    height: 3rem;
+}
+
+.iconoLogin {
+    width: 7rem;
+}
+/* FOOTER */
+.redes {
+    font-size: 2.5rem;
+    color: #000814;
+}
+
+
+#footer {
+    background-color: var(--font-color2);
+}
+
+#footer .subtituloFooter {
+    background: var(--bg-color2);
+    color: #EDF2F4;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    clip-path: polygon(100% 0%, 100% 52%, 100% 100%, 6% 100%, 0% 50%, 6% 0);
+}
+
+#footer .subtituloFooter:hover {
+    cursor: pointer;
+    background-color: #003670;
+    color: #EDF2F4;
+    transition: 0.3s all ease;
+}
+
+.contenedor {
+    border-radius: 10px;
+}
+
+@media screen and (max-width:990px) {
+    #imagenLogin {
+        display: none;
+    }
+}

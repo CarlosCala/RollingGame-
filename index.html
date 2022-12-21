@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Fuente de google-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto-Slab"> -->
     <!-- ANIMACIONES  -->
     <link rel="stylesheet" href="css/magic.min.css">
     <!-- HOJA DE ESTILO -->
@@ -18,10 +20,10 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light bg-light fixed-top ">
+        <nav class="navbar navbar-light bg-light fixed-top " id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand fs-3" href="index.html"><img src="/img/ROLLING__1_-removebg-preview.png"
-                        alt=""></a>
+                        alt="logo de RollingGames"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
@@ -39,10 +41,13 @@
                                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/login.html">LOGIN</a>
+                                <a class="nav-link" href="pages/login.html">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="admin.html">Admin</a>
+                                <a class="nav-link d-none " href="admin.html  ">Admin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="./pages/nosotros.html  ">Acerca de Nosotros</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
@@ -59,10 +64,21 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <form class="d-flex mt-3">
+                            <input class="form-control me-2"  placeholder="Buscar" aria-label="Buscar" id="buscador">
+                            <button class="btn btn-outline-success" id="botonBuscar">Buscar</button>
                         </form>
+
+                        <ul id="resultado">
+                            
+                        </ul>
+                      <form action="#">
+                      
+                            <br><br> <a class="nav-item  text-dark d-none " data-bs-toggle="modal" href="#cerrarSesion" role="button" id="btnCerrarS">cerrar sesion</a>
+
+
+                       </form>
+
                     </div>
                 </div>
             </div>
@@ -355,7 +371,7 @@
                         Mientras atraviesan los nueve reinos, el dúo debe enfrentar nuevas amenazas, incluido Thor, el
                         enfurecido Dios del Trueno
                     </div>
-                    <div class="btn btn-ragnarok mt-3">ver mas</div>
+                    <div class="btn btn-ragnarok mt-3"><a href="pages/destacado.html" class="text-decoration-none text-dark">ver mas</a> </div>
                 </div>
             </div>
         </div>
@@ -609,6 +625,7 @@
                     <p>
                         <i class="fas fa-envelope mr-3"></i> RollingGames.co@gmail.com
                     </p>
+                    <a href="pages/contacto.html" class="text-dark">contactanos</a>
                 </div>
 
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -674,14 +691,27 @@
 
 
     </footer>
-
-    </div>
-
-
-
+    <div class="modal fade" id="cerrarSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-light">
+              <h5 class="modal-title text-dark" id="exampleModalLabel">¿Realmente quieres cerrar la sesión?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-light">
+                <button type="button" class="btn btn-outline-primary text-dark" data-bs-dismiss="modal">Cerrar sesión</button>
+              <button type="submit" class="btn btn-outline-danger  text-dark" data-bs-dismiss="modal">Cancelar</button>
+            
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="/"></script> -->
+    <script src="js/app.js" ></script>
 </body>
+
+
 
 </html>
