@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <title>RollingGames</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("ivfzES_RajvrcZ__h");
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-light fixed-top" id="navBar">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3" href="../index.html">
+                    <img src="/img/ROLLING__1_-removebg-preview.png" alt="logo de RollingGames">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-black-50 text-center" id="offcanvasNavbarLabel">
+                            RollingGames
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/login.html">LOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../admin.html">Admin</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Categorias
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Acción</a></li>
+                                    <li><a class="dropdown-item" href="#">Shooter</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Aventura</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3">
+                            <input class="form-control me-2" placeholder="Buscar" aria-label="Buscar" id="buscador" />
+                            <button class="btn btn-outline-success" id="botonBuscar">
+                                Buscar
+                            </button>
+                        </form>
+                        <ul id="resultado"></ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ====================SECTION CONTACTO============================== -->
+
+    <div class="container-fluid sectionContacto">
+        <div class="row">
+            <div class="-3 col d-none d-lg-block col-sm-12 col-md-10 col-lg-6 imagen">
+                <img src="../img/contacto.png" alt="soldado" class="rounded mx-auto d-block h-auto">
+            </div>
+            <div class="text-center col-sm-12 col-md-12 col-lg-5 mt-4 titulo">
+                <h1 class="text-warning ">Comunicate
+                    con nosotros
+                </h1>
+                <form>
+                    <p class="text-center fs-6"> Brindamos un espacio de consultas, donde estaremos para servirte,
+                        ayudandote con cualquier duda acerca de los juegos promocionados en nuestro pagina </p>
+                    <div class="formulario">
+                        <form action="">
+                            <div class="mb-3 shadow">
+                                <input type="text" class="form-control" placeholder="Nombre completo" required
+                                    maxlength="15" id="nombreContacto">
+                                <div class="invalid-feedback">
+                                    por favor ingrese el nombre.
+                                </div>
+                            </div>
+                            <div class="mb-3 shadow">
+                                <input type="email" class="form-control" id="emailContacto"
+                                    placeholder="nombre@ejemplo.com" required>
+                                <div class="invalid-feedback">
+                                    por favor ingrese el email.
+                                </div>
+                            </div>
+                            <div class="mb-3 shadow">
+                                <input type="textarea" class="form-control" id="consultaContacto"
+                                    placeholder="ingrese su consulta" required maxlength="200" minlength="15">
+                                <div class="invalid-feedback">
+                                    por favor ingrese la consulta.
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-warning mb-3" id="btnEnviar">
+                    </div>
+                </form>
+                <div class="mapa"> <a href="https://goo.gl/maps/FaiGWDJ62mVAgkaPA"><img src="../img/mapaTucuman.png"
+                            alt="ubicacion" class="img-fluid imgMapa shadow">
+
+                    </a>
+                    <p class="my-3 text-warning">clickee en el mapa para abrir direccion </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        </section>
+
+        <footer class=" pt-0 pb-4 mt-0 text-dark" id="footer">
+            <div class="container text-center text-md-left">
+                <div class="row text-center text-md-left">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter"> Rollin GAMES</h5>
+                        <p> <span class=" fw-bold">ROLLING-GAMES</span> es una plataforma de distribución digital de
+                            videojuegos desarrollada por estudiantes de RollingCode.</p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Categorias</h5>
+                        <p>
+                            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Accion</a>
+                        </p>
+                        <p>
+                            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Aventura</a>
+                        </p>
+                        <p>
+                            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Shooter</a>
+                        </p>
+                        <p>
+                            <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Deporte</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Información</h5>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> Laprida 390 - San Miguel de Tucumán
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> +54 9 381 555 5555
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> RollingGames.co@gmail.com
+                        </p>
+                        <a href="contacto.html" class="text-dark">contactanos</a>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Redes Sociales</h5>
+                        <div class="row align-items-center">
+                            <div class="col-md-5 col-lg-4">
+                                <div class="text-center text-md-right">
+                                    <ul class="list-untyled list-inline">
+                                        <li>
+                                            <a href=""> <i class='bx bxl-facebook-circle redes'></i></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-md-5 col-lg-4">
+                                <div class="text-center text-md-right">
+                                    <ul class="list-untyled list-inline">
+                                        <li>
+                                            <a href=""> <i class='bx bxl-instagram redes'></i></i></a>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-md-5 col-lg-4">
+                                <div class="text-center text-md-right">
+                                    <ul class="list-untyled list-inline">
+                                        <li>
+                                            <a href=""> <i class='bx bxl-twitter redes'></i></a>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <hr class="mb-4">
+                <div class="row align-items-center">
+                    <div class="col-md-9 col-lg-12">
+                        <p>© Copyright 2022 All Rights Reserved by:
+                            <a href="#" style="text-decoration: none;">
+                                <strong class="text-dark">ROLLING-GAMES</strong>
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <!--FIN SECCION JUEGOS GRATIS-->
+
+
+
+        </footer>
+
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/contacto.js" type="module"></script>
+
+</body>

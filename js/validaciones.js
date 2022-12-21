@@ -14,12 +14,18 @@ export const campoRequerido = (input) => {
       return false;
     }
   };
-  ////////////////////////
-  
 
-  
-  /////////////////
-  
+  export const validarEmail = (input) => {
+    let patron = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ ;
+
+    if (patron.test(input.value)) {
+      return true
+    } else {
+      alert("email incorrecto")
+      return false
+    }
+  }
+ 
   export const validarUrl = (input) => {
     // vamos a crear una expresion regular, guardar en una variable
   
@@ -37,17 +43,13 @@ export const campoRequerido = (input) => {
       return false;
     }
   };
-  
-  export const validarGeneral = (
-    // campoCodigo,
-    campoProducto,
+    export const validarGeneral = (
+      campoProducto,
     campoDescripcion,
     campoCategoria,
       campoUrl
   ) => {
     //comprobar que pasen cada una validaciones y si no pasan mostrar el alert
-    // console.log('desde validar general');
-    //console.log(e);
     let alerta = document.querySelector("#msjAlerta");
     if (
        campoRequerido(campoProducto) &&
