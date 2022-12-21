@@ -23,4 +23,12 @@ function enviarMail(e) {
         }, function (error) {
             console.log('FAILED...', error);
         });
+         
+Swal.fire({
+    position: 'top-center',
+    icon: 'success',
+    title: 'su consulta fue enviada con exito!',
+    showConfirmButton: false,
+    timer: 1500
+  })       
 }
