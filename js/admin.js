@@ -14,36 +14,53 @@ let campoCategoria = document.getElementById("categoria")
 let campoUrl = document.getElementById("url");
 // para el evento submit del formulario
 let formularioProducto = document.querySelector("#formProducto");
+
+
 let btnPublicado = document.querySelector("#btnPublicado");
+
 let productoExistente = false;
+
 let listaProducto = JSON.parse(localStorage.getItem("arrayProductoKey")) || [];
+
 // btn cerrar para limpar formulario 
+
 let btnCerrar = document.querySelector("#btnCerrar")
+
+
 // btn publicado true o false
 
 let juegoPublicado = false;
 
+
 campoProducto.addEventListener("blur", () => {
   campoRequerido(campoProducto);
 });
+
 campoDescripcion.addEventListener("blur", () => {
   campoRequerido(campoDescripcion);
 });
+
 campoCategoria.addEventListener("blur", () => {
   campoRequerido(campoDescripcion);
 });
+
 btnPublicado.addEventListener("click", () => {
   productoPublicado()
 })
+
+
 campoUrl.addEventListener("blur", () => {
   validarUrl(campoUrl);
 });
+
 formularioProducto.addEventListener("submit", guardarProducto);
+
 btnCerrar.addEventListener("click", limpiarFormulario);
 // invoco a carga inicial de lista , si tengo juegos en el local storage los muestra en la tabla
 cargaInicial()
 // logica del crud
 publicado()
+
 
 function publicado() {
   if (juegoPublicado=== false) {
@@ -52,6 +69,7 @@ function publicado() {
     juegoPublicado = "publicado"
   }
 }
+
 function guardarProducto(e) {
   //prevenir el actualizar del submit
   e.preventDefault();
@@ -65,6 +83,7 @@ function guardarProducto(e) {
       campoUrl
     )
   ) {
+
     if (productoExistente === false) {
       //crear producto
       crearProducto();
@@ -105,6 +124,7 @@ function crearProducto() {
   // cargar productos en  la tabla
   crearFila(productoNuevo);
 }
+
 // funcion limpar el formulario 
 function limpiarFormulario() {
   formularioProducto.reset();
@@ -114,12 +134,15 @@ function limpiarFormulario() {
   campoDescripcion.className = "form-control";
   campoCategoria.className = "form-control";
   campoUrl.className = "form-control";
+
   //resetear la variable bandera o booleana para el caso de modificarProducto
   productoExistente = false;
 };
+
 function guardarLocalStorage() {
   localStorage.setItem("arrayProductoKey", JSON.stringify(listaProducto))
 }
+
 function crearFila(producto) {
   let tablaProducto = document.querySelector("#tablaProducto");
   // se usa el operacion de asignacion de adicion para concatenar con las filas que ya tengo
@@ -195,6 +218,7 @@ function cargaInicial() {
       crearFila(itemProducto)
     }) ;
 }
+
 window.prepararEdicionProducto = function (codigo) {
   // buscar el producto en el array 
   let productoBuscado = listaProducto.find((itemProducto) => {
@@ -222,13 +246,6 @@ function productoPublicado() {
 function modificarProducto() {
   //  encontrar la posicion del elemento que quiero modificar dentro del array de productos
  let indiceProducto = listaProducto.findIndex((itemProducto) => {
-
-  juegoPublicado = "publicado";
-})
-function modificarProducto() {
-  //  encontrar la posicion del elemento que quiero modificar dentro del array de productos
-  let indiceProducto = listaProducto.findIndex((itemProducto) => {
-
     // con el parseInt convierto a numero el stgring a comparar ya que el codigo generado por "CODIGO UNICO" era num 
     return itemProducto.codigo === parseInt(campoCodigo.value);
   });
@@ -252,6 +269,7 @@ function modificarProducto() {
   );
   limpiarFormulario();
 }
+
 function borrarTabla() {
   let tablaProducto = document.querySelector("#tablaProducto");
   tablaProducto.innerHTML = ' '
