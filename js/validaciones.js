@@ -16,12 +16,17 @@ export const campoRequerido = (input) => {
   };
 
   export const validarEmail = (input) => {
-    let patron = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/ ;
+    let patron = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
     if (patron.test(input.value)) {
       return true
     } else {
-      alert("email incorrecto")
+      Swal.fire({
+        icon: 'error',
+        title: 'Email no valido',
+        text: 'email no valido',
+        footer: 'ej : .........@gmail.com'
+      })
       return false
     }
   }
