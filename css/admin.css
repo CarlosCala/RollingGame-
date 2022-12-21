@@ -128,3 +128,9 @@ table {
 .productoDestacado {
     background-color: #F29F05 !important;
 }
+
+@media screen and (max-width:576px)  {
+    #categoria {
+        max-width: 100px;
+    }
+}
