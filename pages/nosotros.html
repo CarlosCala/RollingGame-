@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/nosotros.css"/>
+    <title>Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/primerProyecto.css">
+    <link rel="stylesheet" href="../css/nosotros.css">
+
 </head>
+
 <body>
-    
-    <nav class="navbar navbar-light bg-light fixed-top ">
-        <div class="container-fluid">
-            <a class="navbar-brand fs-3" href="index.html">Rolling Games</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <header>
+        <nav class="navbar navbar-light bg-light" id="menu" ">
+            <div class=" container-fluid ">
+                <a class=" navbar-brand text-wrap " href=" ../index.html">
+            <img src="/img/ROLLING__1_-removebg-preview.png" alt="logo de RollingGames">
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -29,11 +38,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">LOGIN</a>
+                        <li class="nav-item   ">
+                            <a class="nav-link active" href="login.html">Login</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../admin.html">Admin</a>
+                        <li class="nav-item   ">
+                            <a class="nav-link active" href="admin.html">Admin</a>
+                        </li>
+                        <li class="nav-item   ">
+                            <a class="nav-link active" href="./nosotros.html">Acerca de Nosotros</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
@@ -54,14 +66,200 @@
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
+                    <form action="#">
+
+                        <br><br> <a class="nav-item  text-dark" data-bs-toggle="modal" href="#cerrarSesion"
+                            role="button" id="btnCerrarS">cerrar sesion</a>
+
+                        <div class="modal fade" id="cerrarSesion" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-light">
+                                        <h5 class="modal-title text-dark" id="exampleModalLabel">¿Realmente quieres
+                                            cerrar la sesión?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body bg-light">
+                                        <button type="button" class="btn btn-outline-primary text-dark"
+                                            data-bs-dismiss="modal" onclick="cerrarSesion()">Cerrar sesión</button>
+                                        <button type="submit" class="btn btn-outline-danger  text-dark"
+                                            data-bs-dismiss="modal">Cancelar</button>
+
+                    </form>
                 </div>
             </div>
+            </div>
+            </div>
+            </form>
+            </div>
+            </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container-fluid nosotros">
+        <h1>Acerca de nosotros</h1>
+    </div>
+    <section class="container contenido">
+        <h2>Si estás buscando precio, calidad y una buena atención... estás buscando <span
+                class="btn btn-danger">ROLLING-GAMES.</span> </h2>
+
+        <p>🎮 Somos una tienda de videojuegos y códigos digitales con más de 6 años en el mercado. Nos caracterizamos
+            por brindar un excelente servicio y acompañamiento para la descarga de tus juegos.</p>
+
+        <p>😉 Todas las novedades, los mejores precios del mercado, preventas y todo el asesoramiento que necesitás.
+            Nuestra trayectoria nos avala.</p>
+        <p class="fw-bold">🔥 Nuestros productos digitales:
+        <ul class="fs-5">
+            <li> 👉🏼 Juegos Digitales PS5
+            </li>
+            <li> 👉🏼 Juegos Digitales PS4
+            </li>
+            <li> 👉🏼 Juegos Digitales XBOX ONE
+
+            </li>
+            <li>👉🏼 Membresías Plus Online</li>
+        </ul>
+        </p>
+        <span class="fw-bold">📌 Cómo envíamos?</span>
+        <p>El envío de JUEGOS DIGITALES consiste en enviar un email a tu correo electrónico que contiene todos los pasos
+            bien detallados para descargar e instalar el juego, con un video inclusive.</p>
+        <span class="fw-bold">📌 Qué se envía?</span>
+        <p>Envíamos una cuenta (email y contraseña) con el que vas a crear un usuario nuevo en tu consola, e ingresarás
+            en Playstation Store o XBOX Store a realizar la descarga del juego comprado para instalarlo en tu consola.
+        </p>
+        <span class="fw-bold">💸 Qué medios de pago aceptan?</span>
+        <p>Tenemos múltiples medios de pago, como lo son: Tarjeta de Crédito, Tarjeta de Débito, Mercado Pago, MODO,
+            UALÁ, Rapipago, Pago Fácil, Transferencia Bancaria y Paypal.
+        </p>
+    </section>
+
+
+
+    <div class="container my-5 text-center imagenFinal">
+        <img src="../img/LOGO ROLLING 2.png" alt="">
+    </div>
+
+
+
+
+
+
+    <!--FOOTER-->
+    <footer class=" pt-0 pb-4 mt-0 text-dark" id="footer">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter"> Rollin GAMES</h5>
+                    <p> <span class=" fw-bold">ROLLING-GAMES</span> es una plataforma de distribución digital de
+                        videojuegos desarrollada por estudiantes de RollingCode.</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Categorias</h5>
+                    <p>
+                        <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Accion</a>
+                    </p>
+                    <p>
+                        <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Aventura</a>
+                    </p>
+                    <p>
+                        <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Shooter</a>
+                    </p>
+                    <p>
+                        <a href="pages/error.html" class="text-dark" style="text-decoration: none;">Deporte</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Información</h5>
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Laprida 390 - San Miguel de Tucumán
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> +54 9 381 555 5555
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> RollingGames.co@gmail.com
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold subtituloFooter ">Redes Sociales</h5>
+                    <div class="row align-items-center">
+                        <div class="col-md-5 col-lg-4">
+                            <div class="text-center text-md-right">
+                                <ul class="list-untyled list-inline">
+                                    <li>
+                                        <a href=""> <i class='bx bxl-facebook-circle redes'></i></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 col-lg-4">
+                            <div class="text-center text-md-right">
+                                <ul class="list-untyled list-inline">
+                                    <li>
+                                        <a href=""> <i class='bx bxl-instagram redes'></i></i></a>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 col-lg-4">
+                            <div class="text-center text-md-right">
+                                <ul class="list-untyled list-inline">
+                                    <li>
+                                        <a href=""> <i class='bx bxl-twitter redes'></i></a>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-9 col-lg-12">
+                    <p>© Copyright 2022 All Rights Reserved by:
+                        <a href="#" style="text-decoration: none;">
+                            <strong class="text-dark">ROLLING-GAMES</strong>
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+
         </div>
-    </nav>
+        <!--FIN SECCION JUEGOS GRATIS-->
+
+
+
+    </footer>
 
 
 
 
-    <script src="../js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
